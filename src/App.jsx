@@ -6,10 +6,13 @@ import Users from './Users';
 import Friends from './Friends';
 import Posts from './Posts';
 import Players from './Players';
+import Count from './Count';
+import ToggleShowHide from './ToggleShowHide';
+import APIFetch from './APIFetch';
 
 // users
-const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users")
-  .then(res => res.json())
+// const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(res => res.json())
 
 // async / await -> friends
 const fetchFriends = async () => {
@@ -23,6 +26,9 @@ const fetchPosts = async () => {
   return res.json();
 }
 
+// api fetch
+const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users")
+                      .then(res => res.json())
 
 function App() {
 
@@ -50,6 +56,14 @@ function App() {
     <>
       <section id="center">
         <h1>Get started</h1>
+
+        <Suspense fallback={<h3>Users are coming...</h3>}>
+            <APIFetch fetchUsers={fetchUsers}></APIFetch>
+        </Suspense>
+
+        <ToggleShowHide></ToggleShowHide>
+
+        <Count></Count>
 
         <Players></Players>
 

@@ -32,3 +32,10 @@
 // }
 // loadData();
 
+/**
+ * 1. Event trigger
+ * 2. State
+ * 3. Data load from API
+ * 4. Loop through to display data
+ * 5. Why we use key prop
+ */
