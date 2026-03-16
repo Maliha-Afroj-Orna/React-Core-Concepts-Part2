@@ -1,3 +1,9 @@
+## 🚀 Tech Stack
+
+
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
